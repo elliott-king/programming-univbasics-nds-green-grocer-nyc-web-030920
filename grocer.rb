@@ -47,6 +47,12 @@ def apply_coupons(cart, coupons)
 end
 
 def apply_clearance(cart)
+  cart.each do |item|
+    if item[:clearance]:
+      item[:price] = (item[:price]*.8).round(2)
+    end
+  end
+  cart
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
