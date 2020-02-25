@@ -76,7 +76,7 @@ def checkout(cart, coupons)
     sum += item[:price]
   end
   if sum > 100
-    sum = (sum * .9).round(2)
+    sum = (sum * 0.9).round(2)
   end
   sum
 end
